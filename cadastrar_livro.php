@@ -28,33 +28,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<h2>Cadastro livro</h2>
-    <form action="cadastrar_livro.php" method="post">
 
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required>
+    <form class="form" action="cadastrar_livro.php" method="post">
+        <div class="card">
+            <div class="card-top">
+                <h1 class="title">Cadastre um livro</h1>
+            </div>
 
-        <br><br>
+            <div class="card-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
 
-        <label for="autor">Autor:</label>
-        <input type="autor" id="autor" name="autor" required>
-
-        <br><br>
-
-        <label for="paginas">Páginas:</label>
-        <input type="number" id="paginas" name="paginas" required>
+            <div class="card-group">
+                <label for="autor">Autor:</label>
+                <input type="autor" id="autor" name="autor" required>
+            </div>
         
-        <br><br>
+            <div class="card-group">
+                <label for="paginas">Páginas:</label>
+                <input type="number" id="paginas" name="paginas" required>
+            </div>
         
-        <label for="editora">Editora:</label>
-        <input type="text" id="editora" name="editora" required>
-        <br><br>
+            <div class="card-group">
+                <label for="editora">Editora:</label>
+                <input type="text" id="editora" name="editora" required>
+            </div>
 
-        <label for="sinopse">Sinopse:</label>
-        <input type="text" id="sinopse" name="sinopse" required>
-        <br><br>
+            <div class="card-group">
+                <label for="sinopse">Sinopse:</label>
+                <input type="text" id="sinopse" name="sinopse" required>
+            </div>
+
+            <br>
         
-        <input type="submit" value="Cadastrar">
+            <div class="card-group btn">
+                <button type="submit">Cadastrar</button>
+            </div>
+
+            <div class="card-group btn">
+                <button type="submit" formaction="dados.php"><a href="dados.php">Voltar</a></button></span>
+            </div>
+
+        </div>
     </form>
 
     <br>

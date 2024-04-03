@@ -12,7 +12,7 @@
         <div class="card">
             <div class="card-top">
                 <img class="imglogin" src="imagens/usuario.png">
-                <h1 class="title">Preencha os dados:</h1>
+                <h1 class="title">Preencha os dados</h1>
             </div> 
             
             <div class="card-group">
