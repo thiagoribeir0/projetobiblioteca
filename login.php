@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        if (isset($_SESSION["usuarios"][$username]) && $_SESSION["usuarios"][$username] == $password) {
+            $_SESSION["usuario_logado"] = true;
+            header("Location: dados.php");
+            exit();
+        } else {
+            $erro = "Usuário ou senha incorretos.";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +26,12 @@
 </head>
 <body>
     <h2>Login</h2>
+
+    <?php if(isset($erro)) { 
+        echo "<p>$erro</p>"; 
+    } 
+    ?>
+
     <form action="login.php" method="post">
         
         <label for="username">Usuário:</label>
