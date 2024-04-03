@@ -48,9 +48,11 @@ $livros = $_SESSION["livros"] ?? array();
         </tbody>
     </table>
     
-    <br><br>
+    <br>
 
-    <a href="cadastrar_livro.php">Cadastrar um livro</a>
+    <form action="cadastrar_livro.php">
+        <button type="submit" formaction="cadastrar_livro.php">Cadastrar livro</button>
+    </form>
 
 </body>
 </html>

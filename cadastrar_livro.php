@@ -50,5 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <input type="submit" value="Cadastrar">
     </form>
+
+    <br>
+    
+    <form action="dados.php">
+        <button type="submit" formaction="dados.php">Voltar</button>
+    </form>
+
 </body>
 </html>
