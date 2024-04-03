@@ -9,6 +9,16 @@
     <h2>Cadastro</h2>
     <form action="cadastro.php" method="post">
 
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
         <label for="username">Usuário:</label>
         <input type="text" id="username" name="username" required>
         
