@@ -53,12 +53,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" id="password" name="password" required>
             </div>
 
+            <div class="card-group">
+                <span class="centered-link">Não tem uma conta? <a href="cadastro.php">Faça seu cadastro</a>.</p></span>
+            </div>
+
             <br><br>
-        
-            <input type="submit" value="Entrar">
+
+            <div class="card-group btn">
+                <button type="submit">ACESSAR</button>
+            </div> 
     </form>
-    
-    <p>Não tem uma conta? <a href="cadastro.php">Faça seu cadastro</a>.</p>
 
 </body>
 </html>

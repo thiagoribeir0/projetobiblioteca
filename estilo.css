@@ -58,3 +58,36 @@ body {
     box-shadow: 1px 1px 5px #ffffff; /**Aqui esta definindo o fundo do icone**/
     margin: 0 auto; /**Espaçamento do icone para o texto**/
 }
+
+.centered-link {
+    display: block;
+    text-align: center;
+}
+
+.card-group > label {
+    font-family: sans-serif;
+    color: #060575;
+    display: block;
+}
+
+.card-group > input {
+    border-radius: 5px;
+    outline: 0;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+}
+
+.card-group > button {
+    background-image: linear-gradient(to right, #1E90FF, #0000FF); /**Aqui define o degradê do botão acessar**/
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    color: #000000; /**Cor do texto acessar **/
+    border: 0px;
+    outline: 0;
+}
+
+.btn button:hover {
+    background-image: linear-gradient(to right, #0000FF, #1E90FF);
+}
