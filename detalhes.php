@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+</head>
+<body>
+
 <?php
 session_start();
 
@@ -18,3 +27,10 @@ if ($_SESSION["livros"]) {
 }
 }
 ?>
+
+    <form action="dados.php">
+        <button type="submit" formaction="dados.php">Voltar</button>
+    </form>
+
+</body>
+</html>

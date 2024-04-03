@@ -16,10 +16,22 @@ if (isset($_GET["logout"])) {
 if (!isset($_SESSION["livros"])) {
     $_SESSION["livros"] = [
     [
-        "titulo" => "A",
-        "autor" => "B",
-        "paginas" => "1",
-        "editora" => "C",
+        "titulo" => "Neuromancer",
+        "autor" => "William Gibson",
+        "paginas" => "319",
+        "editora" => "Aleph",
+    ],
+    [
+        "titulo" => "Count Zero",
+        "autor" => "William Gibson",
+        "paginas" => "312",
+        "editora" => "Aleph",
+    ],
+    [
+        "titulo" => "Monalisa Overdrive",
+        "autor" => "William Gibson",
+        "paginas" => "320",
+        "editora" => "Aleph",
     ],
 ];
 }
