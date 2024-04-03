@@ -47,8 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Entrar">
     </form>
     
-    <p>
-        Não tem uma conta? <a href="cadastro.php">Faça seu cadastro</a>.</p>
+    <p>Não tem uma conta? <a href="cadastro.php">Faça seu cadastro</a>.</p>
 
 </body>
 </html>
