@@ -13,7 +13,18 @@ if (isset($_GET["logout"])) {
     exit();
 }
 
-$livros = $_SESSION["livros"] ?? array();
+if (!isset($_SESSION["livros"])) {
+    $_SESSION["livros"] = [
+    [
+        "titulo" => "A",
+        "autor" => "B",
+        "paginas" => "1",
+        "editora" => "C",
+    ],
+];
+}
+
+$livros = $_SESSION["livros"];
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +54,7 @@ $livros = $_SESSION["livros"] ?? array();
                         <td><?php echo $livro["autor"]; ?></td>
                         <td><?php echo $livro["paginas"]; ?></td>
                         <td><?php echo $livro["editora"]; ?></td>
-                        <td><a href="detalhes.php">Ver detalhes</a></td>
+                        <td><a href="detalhes.php?titulo=<?php echo urlencode($livro['titulo']); ?>">Ver Detalhes</a></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
