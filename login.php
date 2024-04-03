@@ -41,17 +41,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Para o primeiro acesso, é necessario realizar um cadastro.</p>
             </div>
         
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
+            <div class="card-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <br><br>
+
+            <div class="card-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <br><br>
         
-        <br><br>
-        
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <br><br>
-        
-        <input type="submit" value="Entrar">
+            <input type="submit" value="Entrar">
     </form>
     
     <p>Não tem uma conta? <a href="cadastro.php">Faça seu cadastro</a>.</p>
