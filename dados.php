@@ -27,5 +27,10 @@ if (!isset($_SESSION["usuario_logado"])) {
             </tr>
         </thead>
     </table>
+    
+    <br><br>
+
+    <a href="cadastrar_livro.php">Cadastrar um livro</a>
+
 </body>
 </html>
