@@ -15,6 +15,17 @@ if (!isset($_SESSION["usuario_logado"])) {
     <title>Dados</title>
 </head>
 <body>
-    <h1>Bem vinde!</h1>
+    <h2>Livros cadastrados</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Páginas</th>
+                <th>Editora</th>
+                <th>Detalhes</th>
+            </tr>
+        </thead>
+    </table>
 </body>
 </html>
