@@ -5,6 +5,8 @@ if (!isset($_SESSION["usuario_logado"])) {
     header("Location: login.php");
     exit();
 }
+
+$livros = $_SESSION["livros"] ?? array();
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +28,24 @@ if (!isset($_SESSION["usuario_logado"])) {
                 <th>Detalhes</th>
             </tr>
         </thead>
+        <tbody>
+            <?php if (is_array($livros) && !empty($livros)): ?>
+                <?php foreach ($livros as $livro): ?>
+                    <tr>
+                        <td><?php echo $livro["titulo"]; ?></td>
+                        <td><?php echo $livro["autor"]; ?></td>
+                        <td><?php echo $livro["paginas"]; ?></td>
+                        <td><?php echo $livro["editora"]; ?></td>
+                        <td><a href="detalhes.php">Ver detalhes</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="5">Nenhum livro cadastrado.</td>
+            </tr>
+            <?php endif; ?>
+
+        </tbody>
     </table>
     
     <br><br>
