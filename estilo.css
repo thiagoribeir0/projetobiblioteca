@@ -1,1 +1,5 @@
-/*um teste da diva*/
+body {
+    background: linear-gradient(to bottom, #2766ee, #6ccdf3); /* Degradê no fundo da pag */
+    font-family: sans-serif;
+    min-height: 100vh; /* Para que o degradê fique proporcional*/
+}
