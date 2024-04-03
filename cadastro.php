@@ -32,3 +32,29 @@
     </form>
 </body>
 </html>
+
+<?php
+session_start();
+
+function salvar_usuario($username, $password, &$usuarios) {
+    $novo_usuario = array(
+        "username" => $username,
+        "password" => $password
+    );
+    $usuarios[] = $novo_usuario;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $usuarios = array();
+
+        salvar_usuario($username, $password, $usuarios);
+
+        header("Location: login.php?sucesso=1");
+        exit();
+    }
+}
+?>
