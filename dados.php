@@ -6,6 +6,13 @@ if (!isset($_SESSION["usuario_logado"])) {
     exit();
 }
 
+if (isset($_GET["logout"])) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+
 $livros = $_SESSION["livros"] ?? array();
 ?>
 
@@ -52,6 +59,12 @@ $livros = $_SESSION["livros"] ?? array();
 
     <form action="cadastrar_livro.php">
         <button type="submit" formaction="cadastrar_livro.php">Cadastrar livro</button>
+    </form>
+
+    <br>
+            
+    <form action="login.php">
+        <button type="submit" formaction="login.php">Sair da conta</button>
     </form>
 
 </body>
