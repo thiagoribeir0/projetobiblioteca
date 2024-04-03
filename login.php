@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
     ?>
 
-    <form action="login.php" method="post">
+    <form class="form" action="login.php" method="post">
         
         <label for="username">Usuário:</label>
         <input type="text" id="username" name="username" required>

@@ -3,3 +3,9 @@ body {
     font-family: sans-serif;
     min-height: 100vh; /* Para que o degradê fique proporcional*/
 }
+
+.form {
+    width: 600px;
+    margin: auto;
+    padding-top: 50px;
+}
