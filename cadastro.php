@@ -62,6 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         salvar_usuario($name, $email, $username, $password, $usuarios);
 
+        $_SESSION["usuarios"][$username] = $password;
+
         header("Location: login.php?sucesso=1");
         exit();
     }
