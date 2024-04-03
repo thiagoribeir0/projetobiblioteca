@@ -26,8 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h2>Login</h2>
-
     <?php if(isset($erro)) { 
         echo "<p>$erro</p>"; 
     } 
@@ -37,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="card">
             <div class="card-top">
                 <img class="imglogin" src="imagens/livro.png">
-                <h1 class="title">Seja bem-vindo a nossa Biblioteca Virtual!</h1>
+                <h1 class="title">Biblioteca Virtual</h1>
                 <p>Para o primeiro acesso, é necessario realizar um cadastro.</p>
             </div>
         
@@ -45,8 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="username">Usuário:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-
-            <br><br>
 
             <div class="card-group">
                 <label for="password">Senha:</label>
@@ -62,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="card-group btn">
                 <button type="submit">ACESSAR</button>
             </div> 
+        </div>
     </form>
 
 </body>

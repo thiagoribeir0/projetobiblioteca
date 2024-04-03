@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h2>Cadastro</h2>
-    <form action="cadastro.php" method="post">
 
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
+    <form class="form" action="cadastro.php" method="post">
+        <div class="card">
+            <div class="card-top">
+                <img class="imglogin" src="imagens/usuario.png">
+                <h1 class="title">Preencha os dados:</h1>
+            </div> 
+            
+            <div class="card-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-        <br><br>
+            <div class="card-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <br><br>
-
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
+            <div class="card-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
         
-        <br><br>
-        
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        
-        <input type="submit" value="Cadastrar">
+            <div class="card-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <br></br>
+
+            <div class="card-group btn">
+                <button type="submit">Cadastrar</button>
+            </div>
+
+            <div class="card-group">
+                <span class="centered-link">Já possui uma conta? <a href="login.php">Fazer login</a>.</p></span>
+            </div>
+
+        </div>
     </form>
-
-    <p>Já possui uma conta? <a href="login.php">Fazer login</a>.</p>
 
 </body>
 </html>
