@@ -34,6 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
 
     <form class="form" action="login.php" method="post">
+        <div class="card">
+            <div class="card-top">
+                <img class="imglogin" src="imagens/livro.png">
+                <h1 class="title">Seja bem-vindo a nossa Biblioteca Virtual!</h1>
+                <p>Para o primeiro acesso, é necessario realizar um cadastro.</p>
+            </div>
         
         <label for="username">Usuário:</label>
         <input type="text" id="username" name="username" required>
