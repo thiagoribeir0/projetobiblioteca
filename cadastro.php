@@ -36,8 +36,10 @@
 <?php
 session_start();
 
-function salvar_usuario($username, $password, &$usuarios) {
+function salvar_usuario($name, $email, $username, $password, &$usuarios) {
     $novo_usuario = array(
+        "name" => $name,
+        "email" => $email,
         "username" => $username,
         "password" => $password
     );
@@ -45,13 +47,20 @@ function salvar_usuario($username, $password, &$usuarios) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["username"]) && isset($_POST["password"])) {
+    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["password"])) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
         $username = $_POST["username"];
         $password = $_POST["password"];
 
+        if (empty($name) || empty($email) || empty($username) || empty($password)) {
+            header("Location: cadastro.php?erro=1");
+            exit();
+        }
+
         $usuarios = array();
 
-        salvar_usuario($username, $password, $usuarios);
+        salvar_usuario($name, $email, $username, $password, $usuarios);
 
         header("Location: login.php?sucesso=1");
         exit();
