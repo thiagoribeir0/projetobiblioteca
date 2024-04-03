@@ -1,4 +1,22 @@
+<?php
+session_start();
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["titulo"]) && isset($_POST["autor"]) && isset($_POST["paginas"]) && isset($_POST["editora"])) {
+        $livro = array(
+            "titulo" => $_POST["titulo"],
+            "autor" => $_POST["autor"],
+            "paginas" => $_POST["paginas"],
+            "editora" => $_POST["editora"]
+        );
+
+        $_SESSION["livros"][] = $livro;
+
+        header("Location: dados.php");
+        exit();
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
