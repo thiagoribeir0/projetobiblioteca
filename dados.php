@@ -20,18 +20,21 @@ if (!isset($_SESSION["livros"])) {
         "autor" => "William Gibson",
         "paginas" => "319",
         "editora" => "Aleph",
+        "sinopse" => "Considerada a obra precursora do movimento cyberpunk e um clássico da ficção científica moderna, Neuromancer conta a história de Case, um cowboy do ciberespaço e hacker da matrix. Como punição por tentar enganar os patrões, seu sistema nervoso foi contaminado por uma toxina que o impede de entrar no mundo virtual.",
     ],
     [
         "titulo" => "Count Zero",
         "autor" => "William Gibson",
         "paginas" => "312",
         "editora" => "Aleph",
+        "sinopse" => "Em meio ao caos futurista, Bobby Newmark, um aspirante a cowboy, acaba entrando de gaiato nessa história. E ele estaria morto, se não fosse a intervenção salvadora de uma misteriosa garota feita de luz. Por isso, Bobby – agora Count Zero – se torna uma pessoa valiosa e é ai que a caçada começa.",
     ],
     [
         "titulo" => "Monalisa Overdrive",
         "autor" => "William Gibson",
         "paginas" => "320",
         "editora" => "Aleph",
+        "sinopse" => "As Inteligências Artificiais assombram a matrix. O ciberespaço, essa espécie de alucinação coletiva, está cada vez mais perigoso. As Inteligências Artificiais atingiram a autoconsciência e dividem esse espaço com os mais inusitados personagens, movidos por interesses diversos e intenções nem sempre lícitas.",
     ],
 ];
 }

@@ -2,12 +2,13 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["titulo"]) && isset($_POST["autor"]) && isset($_POST["paginas"]) && isset($_POST["editora"])) {
+    if (isset($_POST["titulo"]) && isset($_POST["autor"]) && isset($_POST["paginas"]) && isset($_POST["editora"]) && isset($_POST["sinopse"])) {
         $livro = array(
             "titulo" => $_POST["titulo"],
             "autor" => $_POST["autor"],
             "paginas" => $_POST["paginas"],
-            "editora" => $_POST["editora"]
+            "editora" => $_POST["editora"],
+            "sinopse" => $_POST["sinopse"],
         );
 
         $_SESSION["livros"][] = $livro;
@@ -46,6 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <label for="editora">Editora:</label>
         <input type="text" id="editora" name="editora" required>
+        <br><br>
+
+        <label for="sinopse">Sinopse:</label>
+        <input type="text" id="sinopse" name="sinopse" required>
         <br><br>
         
         <input type="submit" value="Cadastrar">

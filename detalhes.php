@@ -21,6 +21,7 @@ if ($_SESSION["livros"]) {
             echo "<p>Autor: {$livro['autor']}</p>";
             echo "<p>Páginas: {$livro['paginas']}</p>";
             echo "<p>Editora: {$livro['editora']}</p>";
+            echo "<p>Sinopse: {$livro['sinopse']}</p>";
             break;
         }
     }
