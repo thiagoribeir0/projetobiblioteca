@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: dados.php");
             exit();
         } else {
-            $erro = "Usuário ou senha incorretos.";
+            $erro = "Usuário ou senha incorretos!";
         }
     }
 }
@@ -26,10 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <?php if(isset($erro)) { 
-        echo "<p>$erro</p>"; 
-    } 
-    ?>
 
     <form class="form" action="login.php" method="post">
         <div class="card">
@@ -38,6 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h1 class="title">Biblioteca Virtual</h1>
                 <p>Para o primeiro acesso, é necessario realizar um cadastro.</p>
             </div>
+
+            <?php if(isset($erro)) { ?>
+                <div class="card-group">
+                    <span class="centered-link"><p class="error"><?php echo $erro; ?></p></span>
+                </div> 
+            <?php } ?> 
         
             <div class="card-group">
                 <label for="username">Usuário:</label>

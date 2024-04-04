@@ -92,8 +92,7 @@ body {
     background-image: linear-gradient(to right, #0000FF, #1E90FF);
 }
 
-.table-bordered th,
-.table-bordered td {
-    border: 1px solid black; /* Definindo borda de 1px sólida preta */
-    padding: 8px; /* Ajuste o padding conforme desejado */
+.error {
+    font-weight: bold;
+    color: red;
 }
