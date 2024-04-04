@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form class="form" action="cadastrar_livro.php" method="post">
         <div class="card">
             <div class="card-top">
-                <h1 class="title">Cadastre um livro</h1>
+                <h1 class="title">Cadastrar livro</h1>
             </div>
 
             <div class="card-group">
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" id="sinopse" name="sinopse" required>
             </div>
 
-            <br>
+            <br><br>
         
             <div class="card-group btn">
                 <button type="submit">Cadastrar</button>
@@ -72,12 +72,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </div>
     </form>
-
-    <br>
-    
-    <form action="dados.php">
-        <button type="submit" formaction="dados.php">Voltar</button>
-    </form>
-
 </body>
 </html>

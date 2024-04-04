@@ -96,3 +96,14 @@ body {
     font-weight: bold;
     color: red;
 }
+
+.center-table {
+    margin: 0 auto;
+}
+
+.fit-height {
+    width: 533px;
+    height: 100%; /* Define a altura da caixa de texto como 100% da altura da div pai */
+    box-sizing: border-box; /* Garante que a altura da caixa de texto inclua padding e borda */
+    resize: none; /* Impede que o usuário redimensione a caixa de texto */
+}

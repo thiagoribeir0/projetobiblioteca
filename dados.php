@@ -55,15 +55,14 @@ $livros = $_SESSION["livros"];
 <form class="form" action="dados.php" method="post">
         <div class="card">
             <div class="card-top">
-                <h1 class="title">Livros cadastrados</h1>
+                <h1 class="title">Livros</h1>
             </div>
 
-            <table>
+            <table class="center-table">
                 <thead>
                     <tr>
                         <th scope="col">Título</th>
                         <th scope="col">Autor</th>
-                        <th scope="col">Páginas</th>
                         <th scope="col">Editora</th>
                         <th scope="col">Detalhes</th>
                     </tr>
@@ -75,9 +74,8 @@ $livros = $_SESSION["livros"];
                             <tr>
                                 <td><?php echo $livro["titulo"]; ?></td>
                                 <td><?php echo $livro["autor"]; ?></td>
-                                <td><?php echo $livro["paginas"]; ?></td>
                                 <td><?php echo $livro["editora"]; ?></td>
-                                <td><a href="detalhes.php?titulo=<?php echo urlencode($livro['titulo']); ?>">Ver Detalhes</a></td>
+                                <td><a href="detalhes.php?titulo=<?php echo urlencode($livro['titulo']); ?>">Ver detalhes</a></td>
                             </tr>
                         <?php endforeach; ?>
                         <?php else: ?>

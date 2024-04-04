@@ -10,6 +10,7 @@
 
     <form class="form" action="dados.php" method="post">
         <div class="card">
+            <div class="card-top">
 
         <?php
             session_start();
@@ -20,11 +21,11 @@
             if ($_SESSION["livros"]) {
                 foreach ($_SESSION["livros"] as $livro) {
                 if ($livro["titulo"] === $titulo) {
-                    echo "<p>Título: {$livro['titulo']}</p>";
-                    echo "<p>Autor: {$livro['autor']}</p>";
-                    echo "<p>Páginas: {$livro['paginas']}</p>";
-                    echo "<p>Editora: {$livro['editora']}</p>";
-                    echo "<p>Sinopse: {$livro['sinopse']}</p>";
+                    echo "<h1 class='title'>{$livro['titulo']}</h1>";
+                    echo "<p><strong>Autor:</strong> <br> {$livro['autor']}</p>";
+                    echo "<p><strong>Páginas:</strong> <br> {$livro['paginas']}</p>";
+                    echo "<p><strong>Editora:</strong> <br> {$livro['editora']}</p>";
+                    echo "<p><strong>Sinopse:</strong> <br> {$livro['sinopse']}</p>";
                     break;
                     }
                 }
