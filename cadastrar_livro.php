@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="card-group btn">
-                <button type="submit" formaction="dados.php"><a href="dados.php">Voltar</a></button></span>
+                <button type="submit"><a href="dados.php">Voltar</a></button>
             </div>
 
         </div>

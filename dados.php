@@ -51,48 +51,56 @@ $livros = $_SESSION["livros"];
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h2>Livros cadastrados</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Páginas</th>
-                <th>Editora</th>
-                <th>Detalhes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php if (is_array($livros) && !empty($livros)): ?>
-                <?php foreach ($livros as $livro): ?>
+
+<form class="form" action="dados.php" method="post">
+        <div class="card">
+            <div class="card-top">
+                <h1 class="title">Livros cadastrados</h1>
+            </div>
+
+            <table>
+                <thead>
                     <tr>
-                        <td><?php echo $livro["titulo"]; ?></td>
-                        <td><?php echo $livro["autor"]; ?></td>
-                        <td><?php echo $livro["paginas"]; ?></td>
-                        <td><?php echo $livro["editora"]; ?></td>
-                        <td><a href="detalhes.php?titulo=<?php echo urlencode($livro['titulo']); ?>">Ver Detalhes</a></td>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Páginas</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Detalhes</th>
                     </tr>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <tr>
-                    <td colspan="5">Nenhum livro cadastrado.</td>
-            </tr>
-            <?php endif; ?>
-
-        </tbody>
-    </table>
-    
-    <br>
-
-    <form action="cadastrar_livro.php">
-        <button type="submit" formaction="cadastrar_livro.php">Cadastrar livro</button>
-    </form>
-
-    <br>
+                </thead>
+        
+                <tbody>
+                    <?php if (is_array($livros) && !empty($livros)): ?>
+                        <?php foreach ($livros as $livro): ?>
+                            <tr>
+                                <td><?php echo $livro["titulo"]; ?></td>
+                                <td><?php echo $livro["autor"]; ?></td>
+                                <td><?php echo $livro["paginas"]; ?></td>
+                                <td><?php echo $livro["editora"]; ?></td>
+                                <td><a href="detalhes.php?titulo=<?php echo urlencode($livro['titulo']); ?>">Ver Detalhes</a></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        <?php else: ?>
             
-    <form action="login.php">
-        <button type="submit" formaction="login.php">Sair da conta</button>
-    </form>
+                        <tr>
+                            <td colspan="5">Nenhum livro cadastrado.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        
+            <br>
 
+            <div class="card-group btn">
+                <form action="cadastrar_livro.php">
+                <button type="submit" formaction="cadastrar_livro.php">Cadastrar livro</button>
+                </form>
+            </div>
+
+            <div class="card-group btn">
+                <button type="submit"><a href="login.php">Sair da conta</a></button>
+            </div>   
+        </div>
+    <br>
 </body>
 </html>
