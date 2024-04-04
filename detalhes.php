@@ -8,31 +8,35 @@
 </head>
 <body>
 
-<?php
-session_start();
+    <form class="form" action="dados.php" method="post">
+        <div class="card">
 
-if (isset($_GET['titulo'])) {
-    $titulo = urldecode($_GET['titulo']);
+        <?php
+            session_start();
 
-if ($_SESSION["livros"]) {
-    foreach ($_SESSION["livros"] as $livro) {
-        if ($livro["titulo"] === $titulo) {
-            echo "<h2>Detalhes do livro</h2>";
-            echo "<p>Título: {$livro['titulo']}</p>";
-            echo "<p>Autor: {$livro['autor']}</p>";
-            echo "<p>Páginas: {$livro['paginas']}</p>";
-            echo "<p>Editora: {$livro['editora']}</p>";
-            echo "<p>Sinopse: {$livro['sinopse']}</p>";
-            break;
+            if (isset($_GET['titulo'])) {
+            $titulo = urldecode($_GET['titulo']);
+
+            if ($_SESSION["livros"]) {
+                foreach ($_SESSION["livros"] as $livro) {
+                if ($livro["titulo"] === $titulo) {
+                    echo "<p>Título: {$livro['titulo']}</p>";
+                    echo "<p>Autor: {$livro['autor']}</p>";
+                    echo "<p>Páginas: {$livro['paginas']}</p>";
+                    echo "<p>Editora: {$livro['editora']}</p>";
+                    echo "<p>Sinopse: {$livro['sinopse']}</p>";
+                    break;
+                    }
+                }
+            }
         }
-    }
-}
-}
-?>
+        ?>
 
-    <form action="dados.php">
-        <button type="submit" formaction="dados.php">Voltar</button>
-    </form>
+        <br>
 
+        <div class="card-group btn">
+            <button type="submit"><a href="dados.php">Voltar</a></button>
+        </div>   
+    </div>
 </body>
 </html>
